@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotics Portfolio | Kavish Hewage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { black: '#000000', white: '#ffffff' }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #f4f4f5; }
+        ::-webkit-scrollbar-thumb { background: #d4d4d8; }
+        ::-webkit-scrollbar-thumb:hover { background: #a1a1aa; }
+        ::selection { background-color: #000000; color: #ffffff; }
+        * { border-radius: 0; }
+    </style>
+</head>
+<body class="bg-zinc-50 text-gray-900 font-sans antialiased min-h-screen flex flex-col selection:bg-black selection:text-white">
+
+    <!-- Header Navigation -->
+    <header class="w-full border-b border-gray-200 bg-zinc-50/80 backdrop-blur-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-8 md:px-12 lg:px-16">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex-shrink-0 font-medium text-lg tracking-widest uppercase text-black hover:text-gray-600 transition-colors">
+                    Kavish Hewage
+                </a>
+                <nav class="flex space-x-10">
+                    <a href="index.html" class="text-sm font-medium text-gray-500 hover:text-black transition-colors tracking-widest uppercase">&larr; Back to Portfolio</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow py-24 w-full">
+        <div class="max-w-7xl mx-auto px-8 md:px-12 lg:px-16">
+            
+            <div class="mb-16">
+                <h1 class="text-4xl lg:text-5xl font-light text-black tracking-tight mb-4">Robotics & Engineering</h1>
+                <p class="text-gray-500 font-normal uppercase tracking-widest text-sm">Hardware / Embedded Systems / C++</p>
+            </div>
+
+            <!-- Project List -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <!-- Project 1: SNL -->
+                <article class="flex flex-col border border-gray-200 bg-white hover:border-gray-400 transition-colors duration-300 group shadow-sm hover:shadow-md">
+                    <div class="w-full aspect-[4/3] bg-zinc-100 overflow-hidden border-b border-gray-200">
+                        <img src="https://placehold.co/800x600/eeeeee/999999?text=Project+SNL" alt="Project SNL" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-lg font-medium text-black mb-2 tracking-wide">Project SNL</h3>
+                        <p class="text-xs text-gray-400 uppercase tracking-widest mb-4">Smart Night Lamp</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2 py-1 bg-zinc-100 text-xs tracking-widest uppercase text-gray-600">C++</span>
+                            <span class="px-2 py-1 bg-zinc-100 text-xs tracking-widest uppercase text-gray-600">PWM Control</span>
+                        </div>
+
+                        <p class="text-gray-600 font-light text-sm leading-relaxed text-justify mb-8 flex-grow">
+                            Automates ambient lighting using light-dependent resistors (LDRs) and motion sensors to dynamically adjust brightness based on ambient darkness and room occupancy. Programmed microcontrollers in C++ for real-time sensor processing and smooth fading transitions.
+                        </p>
+                        
+                        <a href="#" class="text-xs font-medium text-black uppercase tracking-widest hover:underline">
+                            View Code &rarr;
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project 2: FloodSense -->
+                <article class="flex flex-col border border-gray-200 bg-white hover:border-gray-400 transition-colors duration-300 group shadow-sm hover:shadow-md">
+                    <div class="w-full aspect-[4/3] bg-zinc-100 overflow-hidden border-b border-gray-200">
+                        <img src="https://placehold.co/800x600/eeeeee/999999?text=FloodSense" alt="FloodSense" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-lg font-medium text-black mb-2 tracking-wide">FloodSense</h3>
+                        <p class="text-xs text-gray-400 uppercase tracking-widest mb-4">Flood Detection Node</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2 py-1 bg-zinc-100 text-xs tracking-widest uppercase text-gray-600">IoT</span>
+                            <span class="px-2 py-1 bg-zinc-100 text-xs tracking-widest uppercase text-gray-600">Wireless</span>
+                        </div>
+
+                        <p class="text-gray-600 font-light text-sm leading-relaxed text-justify mb-8 flex-grow">
+                            A distributed network of sensor nodes that monitor rising water levels and localized environmental conditions, relaying status updates before flooding escalates. Built on C++ firmware for low-power microcontroller nodes implementing threshold-based triggers.
+                        </p>
+                        
+                        <a href="#" class="text-xs font-medium text-black uppercase tracking-widest hover:underline">
+                            View Architecture &rarr;
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project 3: WaterSkimmer -->
+                <article class="flex flex-col border border-gray-200 bg-white hover:border-gray-400 transition-colors duration-300 group shadow-sm hover:shadow-md">
+                    <div class="w-full aspect-[4/3] bg-zinc-100 overflow-hidden border-b border-gray-200">
+                        <img src="https://placehold.co/800x600/eeeeee/999999?text=WaterSkimmer" alt="WaterSkimmer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-lg font-medium text-black mb-2 tracking-wide">WaterSkimmer</h3>
+                        <p class="text-xs text-gray-400 uppercase tracking-widest mb-4">Cleaning Robot</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2 py-1 bg-zinc-100 text-xs tracking-widest uppercase text-gray-600">Motors</span>
+                            <span class="px-2 py-1 bg-zinc-100 text-xs tracking-widest uppercase text-gray-600">JavaScript UI</span>
+                        </div>
+
+                        <p class="text-gray-600 font-light text-sm leading-relaxed text-justify mb-8 flex-grow">
+                            Operates along the surface layers of ponds and lakes, capturing floating trash in a collection bay while simultaneously recording key environmental metrics. Combines C++ for motor control with a JavaScript web interface for remote telemetry.
+                        </p>
+                        
+                        <a href="#" class="text-xs font-medium text-black uppercase tracking-widest hover:underline">
+                            View Schematics &rarr;
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-10 mt-auto">
+        <div class="max-w-7xl mx-auto px-8 md:px-12 lg:px-16 flex flex-col md:flex-row items-center justify-between">
+            <a href="index.html" class="text-black hover:text-gray-500 font-medium tracking-widest uppercase text-sm transition-colors mb-4 md:mb-0">
+                &larr; Main Portfolio
+            </a>
+            <p class="text-gray-400 text-xs uppercase tracking-widest">
+                &copy; 2026 Kavish Hewage.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
