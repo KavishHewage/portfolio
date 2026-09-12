@@ -1,259 +1,107 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kavish Hewage | Portfolio</title>
-    
-    <!-- Load Google Fonts: Inter for a clean, modern sans-serif look -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Tailwind Configuration for strict monochrome aesthetic -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        black: '#000000',
-                        white: '#ffffff',
-                        gray: {
-                            50: '#fafafa',
-                            100: '#f5f5f5',
-                            200: '#eeeeee',
-                            300: '#e0e0e0',
-                            400: '#bdbdbd',
-                            500: '#9e9e9e',
-                            600: '#757575',
-                            700: '#616161',
-                            800: '#424242',
-                            900: '#212121',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    
+    <title>Kavish Hewage - Developer Portfolio</title>
     <style>
-        /* Minimalist scrollbar */
-        ::-webkit-scrollbar {
-            width: 6px;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
         }
-        ::-webkit-scrollbar-track {
-            background: #ffffff; 
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
         }
-        ::-webkit-scrollbar-thumb {
-            background: #e0e0e0; 
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 20px;
         }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #9e9e9e; 
-        }
-        
-        /* Highlight selection styling */
-        ::selection {
-            background-color: #000000;
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
             color: #ffffff;
         }
-
-        /* Enforce sharp edges generally, except where explicitly rounded */
-        * {
-            border-radius: 0;
+        h2 {
+            color: #ffffff;
+            margin-top: 30px;
+        }
+        .project-card {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .project-title {
+            margin: 0;
+            font-size: 1.25rem;
+        }
+        .status {
+            font-size: 0.85rem;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+        .status.deployed { background-color: #2e7d32; color: #fff; }
+        .status.progress { background-color: #f57c00; color: #fff; }
+        .status.experimental { background-color: #0277bd; color: #fff; }
+        a {
+            color: #64b5f6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
-<body class="bg-white text-gray-900 font-sans antialiased min-h-screen flex flex-col selection:bg-black selection:text-white">
+<body>
 
-    <!-- Navigation -->
-    <header class="w-full border-b border-gray-200 bg-white/80 backdrop-blur-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-8 md:px-12 lg:px-16">
-            <div class="flex items-center justify-between h-20">
-                <div class="flex-shrink-0 font-medium text-lg tracking-widest uppercase text-black">
-                    Kavish Hewage
-                </div>
-                <nav class="hidden md:flex space-x-12">
-                    <a href="#about" class="text-sm font-medium text-gray-500 hover:text-black transition-colors tracking-widest uppercase">Profile</a>
-                    <a href="#expertise" class="text-sm font-medium text-gray-500 hover:text-black transition-colors tracking-widest uppercase">Expertise</a>
-                    <a href="#projects" class="text-sm font-medium text-gray-500 hover:text-black transition-colors tracking-widest uppercase">Projects</a>
-                </nav>
-            </div>
-        </div>
+<div class="container">
+    <header>
+        <h1>Kavish Hewage</h1>
+        <p>Full-Stack Developer & Robotics Enthusiast</p>
     </header>
 
-    <!-- Main Content -->
-    <main class="flex-grow">
-        
-        <!-- Hero Section -->
-        <section id="about" class="py-24 md:py-32 w-full">
-            <div class="max-w-7xl mx-auto px-8 md:px-12 lg:px-16">
-                <!-- Two-column flexbox layout -->
-                <div class="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">
-                    
-                    <!-- Left side: Text Content -->
-                    <div class="w-full lg:w-3/5 order-2 lg:order-1">
-                        <h1 class="text-5xl lg:text-6xl font-light text-black tracking-tight mb-4">
-                            Kavish Hewage
-                        </h1>
-                        <h2 class="text-lg lg:text-xl text-gray-500 font-normal uppercase tracking-widest mb-10">
-                            Student & Robotics Developer
-                        </h2>
-                        
-                        <p class="text-gray-700 text-base lg:text-lg leading-relaxed font-light max-w-2xl text-justify">
-                            I am a dedicated student focusing on robotics, embedded systems, and software development. My objective is to engineer practical hardware and software solutions that interact seamlessly with the physical world. With expertise in C++ and JavaScript, I specialize in designing autonomous systems and sensor networks. Outside of my technical endeavors, I am an avid pianist, balancing analytical engineering with creative expression.
-                        </p>
-                    </div>
+    <section id="projects">
+        <h2>Projects</h2>
 
-                    <!-- Right side: Profile Image -->
-                    <div class="w-full lg:w-2/5 order-1 lg:order-2 flex justify-start lg:justify-end">
-                        <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
-                            <img src="profile.png" 
-                                 onerror="this.src='https://placehold.co/600x600/eeeeee/999999?text=Portrait'"
-                                 alt="Kavish Hewage Portrait" 
-                                 class="w-full h-full object-cover border border-gray-200" style="border-radius: 4px;">
-                        </div>
-                    </div>
-                    
-                </div>
+        <div class="project-card">
+            <div class="project-header">
+                <h3 class="project-title">Project SNL</h3>
+                <span class="status deployed">Deployed</span>
             </div>
-        </section>
-
-        <!-- What I Do Section -->
-        <section id="expertise" class="py-24 bg-gray-50 border-t border-gray-200">
-            <div class="max-w-7xl mx-auto px-8 md:px-12 lg:px-16">
-                
-                <div class="mb-16">
-                    <h2 class="text-2xl font-light text-black uppercase tracking-widest border-b border-gray-300 pb-4 inline-block pr-16">
-                        Domains of Expertise
-                    </h2>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-                    
-                    <!-- Domain 1: Robotics & Engineering -->
-                    <div class="border border-gray-300 bg-white p-10 hover:border-black transition-colors duration-300">
-                        <h3 class="text-xl font-medium text-black mb-4 tracking-wide">Robotics & Engineering</h3>
-                        <p class="text-gray-600 font-light leading-relaxed mb-6">
-                            Designing and building hardware and embedded systems. Focused on bridging the gap between mechanical execution and software intelligence.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mt-auto">
-                            <span class="px-3 py-1 bg-gray-100 text-gray-800 text-xs tracking-wider uppercase border border-gray-200">C++</span>
-                            <span class="px-3 py-1 bg-gray-100 text-gray-800 text-xs tracking-wider uppercase border border-gray-200">JavaScript</span>
-                            <span class="px-3 py-1 bg-gray-100 text-gray-800 text-xs tracking-wider uppercase border border-gray-200">Embedded Systems</span>
-                        </div>
-                    </div>
-
-                    <!-- Domain 2: Music -->
-                    <div class="border border-gray-300 bg-white p-10 hover:border-black transition-colors duration-300">
-                        <h3 class="text-xl font-medium text-black mb-4 tracking-wide">Music</h3>
-                        <p class="text-gray-600 font-light leading-relaxed mb-6">
-                            Avid pianist. Exploring the structural and creative elements of music theory, providing a balanced, artistic counterpart to technical engineering.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mt-auto">
-                            <span class="px-3 py-1 bg-gray-100 text-gray-800 text-xs tracking-wider uppercase border border-gray-200">Pianist</span>
-                            <span class="px-3 py-1 bg-gray-100 text-gray-800 text-xs tracking-wider uppercase border border-gray-200">Creative Expression</span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section (Robotics & Software) -->
-        <section id="projects" class="py-24 w-full">
-            <div class="max-w-7xl mx-auto px-8 md:px-12 lg:px-16">
-                
-                <div class="mb-16">
-                    <h2 class="text-2xl font-light text-black uppercase tracking-widest border-b border-gray-300 pb-4 inline-block pr-16">
-                        Robotics & Selected Works
-                    </h2>
-                </div>
-
-                <!-- Projects Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-                    <!-- Project 1: SNL -->
-                    <article class="flex flex-col border border-gray-200 hover:border-gray-400 transition-colors duration-300 group relative">
-                        <div class="absolute top-4 right-4 bg-black text-white text-[10px] font-medium tracking-widest uppercase px-3 py-1 z-10">
-                            Deployed
-                        </div>
-                        <div class="w-full aspect-[4/3] bg-gray-100 overflow-hidden border-b border-gray-200">
-                            <img src="https://placehold.co/800x600/eeeeee/999999?text=Project+SNL" alt="Project SNL" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
-                        </div>
-                        <div class="p-8 flex flex-col flex-grow bg-white">
-                            <h3 class="text-lg font-medium text-black mb-2 tracking-wide">Project SNL</h3>
-                            <p class="text-xs text-gray-400 uppercase tracking-widest mb-6">Smart Night Lamp</p>
-                            <p class="text-gray-600 font-light text-sm leading-relaxed text-justify">
-                                Standard night lights are static and inefficient. Project SNL automates ambient lighting by using light-dependent resistors (LDRs) and motion sensors to dynamically adjust brightness based on ambient darkness and room occupancy. Programmed microcontrollers in C++ for real-time sensor processing and implemented Pulse Width Modulation (PWM) to handle smooth light fading transitions.
-                            </p>
-                        </div>
-                    </article>
-
-                    <!-- Project 2: FloodSense -->
-                    <article class="flex flex-col border border-gray-200 hover:border-gray-400 transition-colors duration-300 group relative">
-                        <div class="absolute top-4 right-4 bg-gray-200 text-gray-700 text-[10px] font-medium tracking-widest uppercase px-3 py-1 z-10">
-                            In Progress
-                        </div>
-                        <div class="w-full aspect-[4/3] bg-gray-100 overflow-hidden border-b border-gray-200">
-                            <img src="https://placehold.co/800x600/eeeeee/999999?text=FloodSense" alt="FloodSense" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
-                        </div>
-                        <div class="p-8 flex flex-col flex-grow bg-white">
-                            <h3 class="text-lg font-medium text-black mb-2 tracking-wide">
-                                <a href="https://github.com/KavishHewage/FloodSense" target="_blank" rel="noopener noreferrer" class="hover:underline">FloodSense</a>
-                            </h3>
-                            <p class="text-xs text-gray-400 uppercase tracking-widest mb-6">Environmental Monitoring</p>
-                            <p class="text-gray-600 font-light text-sm leading-relaxed text-justify mb-6">
-                                An in-progress environmental monitoring system utilizing sensor data tracking and analysis.
-                            </p>
-                            <div class="mt-auto pt-4 border-t border-gray-100">
-                                <a href="https://github.com/KavishHewage/FloodSense" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-black hover:text-gray-500 uppercase tracking-widest transition-colors flex items-center w-max group-hover:text-black">
-                                    View on GitHub 
-                                    <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 3: WaterSkimmer -->
-                    <article class="flex flex-col border border-gray-200 hover:border-gray-400 transition-colors duration-300 group relative">
-                        <div class="absolute top-4 right-4 bg-gray-200 text-gray-700 text-[10px] font-medium tracking-widest uppercase px-3 py-1 z-10">
-                            In Progress
-                        </div>
-                        <div class="w-full aspect-[4/3] bg-gray-100 overflow-hidden border-b border-gray-200">
-                            <img src="https://placehold.co/800x600/eeeeee/999999?text=WaterSkimmer" alt="WaterSkimmer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
-                        </div>
-                        <div class="p-8 flex flex-col flex-grow bg-white">
-                            <h3 class="text-lg font-medium text-black mb-2 tracking-wide">WaterSkimmer</h3>
-                            <p class="text-xs text-gray-400 uppercase tracking-widest mb-6">Waterbody Cleaning Robot</p>
-                            <p class="text-gray-600 font-light text-sm leading-relaxed text-justify">
-                                Aquatic debris causes significant pollution while water health metrics often go unmonitored. WaterSkimmer operates along the surface layers of ponds and lakes, physically capturing floating trash in a collection bay while simultaneously recording key environmental metrics. Combines C++ for motor control and real-time sensor readout with a JavaScript web interface to visualize telemetry and control the robot remotely.
-                            </p>
-                        </div>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-white border-t border-gray-200 py-10 mt-auto">
-        <div class="max-w-7xl mx-auto px-8 md:px-12 lg:px-16 flex flex-col md:flex-row items-center justify-between">
-            <div class="text-black font-medium tracking-widest uppercase text-sm mb-4 md:mb-0">
-                Kavish Hewage
-            </div>
-            <p class="text-gray-400 text-xs uppercase tracking-widest">
-                &copy; 2024. All rights reserved.
-            </p>
+            <p>A fully deployed web application showcasing interactive front-end design and responsive architecture.</p>
+            <a href="#" target="_blank">View Project SNL</a>
         </div>
-    </footer>
+
+        <div class="project-card">
+            <div class="project-header">
+                <h3 class="project-title">FloodSense</h3>
+                <span class="status progress">In Progress</span>
+            </div>
+            <p>An environmental monitoring system utilizing sensor data tracking and analysis.</p>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <h3 class="project-title">WaterSkimmer</h3>
+                <span class="status experimental">Experimental</span>
+            </div>
+            <p>An experimental robotics project focused on automated water-surface maintenance and control algorithms.</p>
+        </div>
+    </section>
+</div>
 
 </body>
 </html>
