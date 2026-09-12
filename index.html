@@ -1,107 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kavish Hewage - Developer Portfolio</title>
+    <title>Kavish Hewage | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        black: '#000000',
+                        white: '#ffffff'
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #121212;
-            color: #e0e0e0;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        header {
-            margin-bottom: 40px;
-            border-bottom: 1px solid #333;
-            padding-bottom: 20px;
-        }
-        h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            color: #ffffff;
-        }
-        h2 {
-            color: #ffffff;
-            margin-top: 30px;
-        }
-        .project-card {
-            background-color: #1e1e1e;
-            border: 1px solid #333;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .project-title {
-            margin: 0;
-            font-size: 1.25rem;
-        }
-        .status {
-            font-size: 0.85rem;
-            padding: 4px 8px;
-            border-radius: 4px;
-        }
-        .status.deployed { background-color: #2e7d32; color: #fff; }
-        .status.progress { background-color: #f57c00; color: #fff; }
-        .status.experimental { background-color: #0277bd; color: #fff; }
-        a {
-            color: #64b5f6;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #f4f4f5; }
+        ::-webkit-scrollbar-thumb { background: #d4d4d8; }
+        ::-webkit-scrollbar-thumb:hover { background: #a1a1aa; }
+        ::selection { background-color: #000000; color: #ffffff; }
+        * { border-radius: 0; }
     </style>
 </head>
-<body>
+<body class="bg-zinc-50 text-gray-900 font-sans antialiased min-h-screen flex flex-col selection:bg-black selection:text-white">
 
-<div class="container">
-    <header>
-        <h1>Kavish Hewage</h1>
-        <p>Full-Stack Developer & Robotics Enthusiast</p>
+    <!-- Header Navigation -->
+    <header class="w-full border-b border-gray-200 bg-zinc-50/80 backdrop-blur-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-8 md:px-12 lg:px-16">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex-shrink-0 font-medium text-lg tracking-widest uppercase text-black hover:text-gray-600 transition-colors">
+                    Kavish Hewage
+                </a>
+                <nav class="hidden md:flex space-x-10">
+                    <a href="#about" class="text-sm font-medium text-gray-500 hover:text-black transition-colors tracking-widest uppercase">Profile</a>
+                    <a href="robotics.html" class="text-sm font-medium text-gray-500 hover:text-black transition-colors tracking-widest uppercase">Robotics</a>
+                    <a href="music.html" class="text-sm font-medium text-gray-500 hover:text-black transition-colors tracking-widest uppercase">Music</a>
+                </nav>
+            </div>
+        </div>
     </header>
 
-    <section id="projects">
-        <h2>Projects</h2>
-
-        <div class="project-card">
-            <div class="project-header">
-                <h3 class="project-title">Project SNL</h3>
-                <span class="status deployed">Deployed</span>
+    <!-- Main Content -->
+    <main class="flex-grow">
+        
+        <!-- Hero / About -->
+        <section id="about" class="py-24 md:py-32 w-full">
+            <div class="max-w-7xl mx-auto px-8 md:px-12 lg:px-16">
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">
+                    <div class="w-full lg:w-3/5 order-2 lg:order-1">
+                        <h1 class="text-5xl lg:text-6xl font-light text-black tracking-tight mb-4">
+                            Kavish Hewage
+                        </h1>
+                        <h2 class="text-lg lg:text-xl text-gray-500 font-normal uppercase tracking-widest mb-10">
+                            Student, Robotics Developer & Pianist
+                        </h2>
+                        <p class="text-gray-700 text-base lg:text-lg leading-relaxed font-light max-w-2xl text-justify">
+                            I am a dedicated student focusing on robotics, embedded systems, and software development. My objective is to engineer practical hardware and software solutions that interact seamlessly with the physical world. With expertise in C++ and JavaScript, I specialize in designing autonomous systems and sensor networks. Outside of my technical endeavors, I am a Grade 8 Trinity certified pianist, balancing analytical engineering with creative musical expression.
+                        </p>
+                    </div>
+                    <div class="w-full lg:w-2/5 order-1 lg:order-2 flex justify-start lg:justify-end">
+                        <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
+                            <img src="profile.png" alt="Kavish Hewage Portrait" class="w-full h-full object-cover border border-gray-200 shadow-sm">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p>A fully deployed web application showcasing interactive front-end design and responsive architecture.</p>
-            <a href="#" target="_blank">View Project SNL</a>
-        </div>
+        </section>
 
-        <div class="project-card">
-            <div class="project-header">
-                <h3 class="project-title">FloodSense</h3>
-                <span class="status progress">In Progress</span>
-            </div>
-            <p>An environmental monitoring system utilizing sensor data tracking and analysis.</p>
-        </div>
+        <!-- Expertise Section (Hub Links) -->
+        <section id="expertise" class="py-24 border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-8 md:px-12 lg:px-16">
+                <div class="mb-16">
+                    <h2 class="text-2xl font-light text-black uppercase tracking-widest border-b border-gray-300 pb-4 inline-block pr-16">
+                        Domains of Expertise
+                    </h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                    
+                    <!-- Robotics Link Card -->
+                    <a href="robotics.html" class="group border border-gray-200 bg-white p-10 hover:border-black shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between block">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-xl font-medium text-black tracking-wide group-hover:underline">Robotics & Engineering</h3>
+                                <span class="text-xs uppercase tracking-widest text-gray-400 group-hover:text-black transition-colors">Open &rarr;</span>
+                            </div>
+                            <p class="text-gray-600 font-light leading-relaxed mb-6">
+                                Designing and building hardware and embedded systems. Focused on bridging mechanical execution with real-time software control.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-zinc-100 text-gray-800 text-xs tracking-wider uppercase border border-gray-200">C++</span>
+                                <span class="px-3 py-1 bg-zinc-100 text-gray-800 text-xs tracking-wider uppercase border border-gray-200">JavaScript</span>
+                                <span class="px-3 py-1 bg-zinc-100 text-gray-800 text-xs tracking-wider uppercase border border-gray-200">Hardware</span>
+                            </div>
+                            <span class="inline-block text-xs font-medium text-black uppercase tracking-widest border-b border-black pb-1 group-hover:pr-2 transition-all">
+                                Explore Robotics Portfolio
+                            </span>
+                        </div>
+                    </a>
 
-        <div class="project-card">
-            <div class="project-header">
-                <h3 class="project-title">WaterSkimmer</h3>
-                <span class="status experimental">Experimental</span>
+                    <!-- Music Link Card -->
+                    <a href="music.html" class="group border border-gray-200 bg-white p-10 hover:border-black shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between block">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-xl font-medium text-black tracking-wide group-hover:underline">Music & Piano</h3>
+                                <span class="text-xs uppercase tracking-widest text-gray-400 group-hover:text-black transition-colors">Open &rarr;</span>
+                            </div>
+                            <p class="text-gray-600 font-light leading-relaxed mb-6">
+                                Grade 8 Trinity Pianist. Exploring classical performance, theory, and artistic interpretation as a balanced counterpart to technical engineering.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-black text-white text-xs tracking-wider uppercase">Grade 8 Trinity</span>
+                                <span class="px-3 py-1 bg-zinc-100 text-gray-800 text-xs tracking-wider uppercase border border-gray-200">Classical Pianist</span>
+                            </div>
+                            <span class="inline-block text-xs font-medium text-black uppercase tracking-widest border-b border-black pb-1 group-hover:pr-2 transition-all">
+                                View Music Profile
+                            </span>
+                        </div>
+                    </a>
+
+                </div>
             </div>
-            <p>An experimental robotics project focused on automated water-surface maintenance and control algorithms.</p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-10 mt-auto">
+        <div class="max-w-7xl mx-auto px-8 md:px-12 lg:px-16 flex flex-col md:flex-row items-center justify-between">
+            <div class="text-black font-medium tracking-widest uppercase text-sm mb-4 md:mb-0">
+                Kavish Hewage
+            </div>
+            <p class="text-gray-400 text-xs uppercase tracking-widest">
+                &copy; 2026. All rights reserved.
+            </p>
         </div>
-    </section>
-</div>
+    </footer>
 
 </body>
 </html>
